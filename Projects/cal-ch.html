@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ryan Tang">
+    <meta property="og:description" content="ryan's portfolio">
+    <meta property="og:image" content="/images/background.jpeg">
+    <meta property="og:url" content="https://ryanhieutang.github.io">
+    <title>Ryan Tang</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="/prism.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="main-page">
+        <nav class="navbar">
+            <a class="navtext" href="/index.html" style="font-weight: bold; padding: 2px;">ツ</a>
+            <a class="navtext" href="/projects.html">projects</a>
+            <a class="navtext" href="/achievements.html" >achievements</a>
+            <a class="navtext" href="/activity.html">activity</a>
+        </nav>
+        <div data-aos="fade-up" class="hero-section">
+           <div data-aos="fade-up" class="projects">
+            <div class="projHeader">Cal-ch the calculator</div>
+            <p>This project is a kickstart to my Javascript learning, in addition to my front-end journey where I wanted to incorporate a fun way to calculate simple equations. Along the process, I broadened my skillsets when handling packages in nodeJS such as tilt.js. Tilt.js is a smooth 3D tilt javascript library that is lightweight and runs on 60FPS, offering users to play around with perspectives on mouse hover.</p>
+            <p>The calculator has a minimalistic interface and is set out by a 4 by 5 grid. I made the buttons "c" (clear) and "+" (addition) be 2 squares wide to emphasise it's importance and "power" compared to the other buttons which only takes up 1 square.<p>
+            <p><img src="/Project Images/calculatorApp.png" alt="Cal-ch preview" class="projImg"></p>
+            <p>The calculator has been set out to be translucent which reflects the warm-pink background when tilted on mouse hover, from inspirations of a CD disk. Furtheremore, a shadow under the calculator has also been applied on the opposite side of mouse hover to give an effect that this calculator is floating on top of the background.<p>
+            <p><pre class="code language-javascript"><code class="code language-javascript">VanillaTilt.init(document.querySelector(".container"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+});</code></pre></p>
+            <p style="padding-top: 50px;">This project is open source and can be viewed using the steps I have provided on my github repository. The repository can be viewed <a style="font-weight: bold; text-decoration: none; color: #9CA3AF;"  href="https://github.com/ryanhieutang/cal-ch" target=”_blank”>here</a></p>
+           </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="/prism.js"></script>
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+    <script type="text/javascript">
+        options = {
+        "cursorOuter": "circle-basic",
+        "hoverEffect": "circle-move",
+        "hoverItemMove": false,
+        "defaultCursor": false,
+        "outerWidth": 30,
+        "outerHeight": 30
+          };
+        magicMouse(options);
+    </script>
+</body>
+</html>

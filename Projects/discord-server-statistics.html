@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ryan Tang">
+    <meta property="og:description" content="ryan's portfolio">
+    <meta property="og:image" content="/images/background.jpeg">
+    <meta property="og:url" content="https://ryanhieutang.github.io">
+    <title>Ryan Tang</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="/prism.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="main-page">
+        <nav class="navbar">
+            <a class="navtext" href="./index.html" style="font-weight: bold; padding: 2px;">ツ</a>
+            <a class="navtext" href="/projects.html">projects</a>
+            <a class="navtext" href="/achievements.html" >achievements</a>
+            <a class="navtext" href="/activity.html">activity</a>
+        </nav>
+        <div data-aos="fade-up" class="hero-section">
+           <div data-aos="fade-up" class="projects">
+            <div class="projHeader">Discord Server Statistics</div>
+            <p>With the prevelent problem of public Discord bots not having the option to customise the name of server statistics channels, I came up with a solution to create my own bot which includes this functionality. This feature was then successfully implemented in the Discord server of <a style="font-weight: 900; text-decoration: none; color: #9CA3AF;"  href="https://www.milliontoken.org/" target=”_blank” >Million Token</a>, a multi-chain cryptocurrency I have interned at as one of their backend developers.</p>
+            <img src="/Project Images/discord-stats.png" alt="Million Token's implementation of Discord server stats" class="projImg">
+            <p>It features the ability to display the count of users in a Discord server in total, current users online, and the amount with users with a specific role (role is changebale to liking). This is set out in a simplistic order for personal customisation of how the voice channel would be named.</p>
+            <pre><code class="language-javascript">totalUsers.setName("Total Users: " + userCount)
+.then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+.catch(console.error);
+
+onlineUsers.setName("Online Users: " + onlineCount)
+.then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+.catch(console.error);
+
+roles.setName("Coders: " + coderCount)
+.then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+.catch(console.error);</code></pre>
+            <p style="padding-top: 50px;">By using <a style="font-weight: 900; text-decoration: none; color: #9CA3AF;"  href="https://discord.js.org/" target=”_blank”>discord.js</a>, I was able to interact with the Discord API which essentially is making a GET request to retrieve the data necessary.</p>
+            <p>This project is open source and can be viewed using the steps I have provided on my github repository. The repository can be viewed <a style="font-weight: 900; text-decoration: none; color: #9CA3AF;"  href="https://github.com/ryanhieutang/discord-server-stats" target=”_blank”>here</a></p>
+           </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="/prism.js"></script>
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+    <script type="text/javascript">
+        options = {
+        "cursorOuter": "circle-basic",
+        "hoverEffect": "circle-move",
+        "hoverItemMove": false,
+        "defaultCursor": false,
+        "outerWidth": 30,
+        "outerHeight": 30
+          };
+        magicMouse(options);
+    </script>
+</body>
+</html>
