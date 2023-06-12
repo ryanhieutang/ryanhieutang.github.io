@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter');
 
 html {
+    /* background-image: url('/images/bg2.png');
+    background-size: 60%;
+    background-position: bottom right;
+    background-repeat: no-repeat; */
     background-color: #0a0a0a;
     scroll-behavior: smooth;
     line-height: 1.15; /* 1 */
@@ -58,19 +62,46 @@ body {
     margin-left: 12rem;
 }
 
+.main {
+    display: flex;
+}
+
+.cdIMG {
+    border-radius: 50%;
+    display: block;
+    width: 30rem;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.spin-animation {
+    animation: spin 10s infinite linear;
+  }
+  
+@keyframes spin {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
+
+.left-hero {
+    margin-right: 5rem;
+}
+
 .personal-desc {
     width: 500px;
     margin-top: 15px;
     color: #9CA3AF;
 }
-
 .socials {
-    color: white;
     display: flex;
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 0 12rem 1.5rem 0rem;
+    margin: 0 14rem 1.5rem 0rem;
 }
 
 .social-icons {
@@ -212,22 +243,26 @@ body {
     
     /* Media Queries */
     
-    /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
-    .navbar {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+.navbar {
+margin-left: 2rem;
+}
+.hero-section {
     margin-left: 2rem;
-    }
-    .hero-section {
-        margin-left: 2rem;
-    }
-    
-    .email {
-        margin: 0 0 1.5rem 2rem;
-    }
-    
-    .socials {
-        margin: 0 2rem 1.5rem 0;
-    }
+}
+
+.email {
+    margin: 0 0 1.5rem 2rem;
+}
+
+.socials {
+    margin: 0 2rem 1.5rem 0;
+}
+
+.cdIMG {
+    width: 20rem;
+}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -246,6 +281,10 @@ margin-left: 7rem;
 .socials {
     margin: 0 7rem 1.5rem 0;
 }
+
+.cdIMG {
+    width: 15rem;
+}
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -262,7 +301,11 @@ margin-left: 12rem;
 }
 
 .socials {
-    margin: 0 12rem 1.5rem 0;
+    margin: 0 11rem 1.5rem 0;
+}
+
+.cdIMG {
+    width: 20rem;
 }
 }
 
@@ -280,7 +323,11 @@ margin-left: 15rem;
 }
 
 .socials {
-    margin: 0 15rem 1.5rem 0;
+    margin: 0 12rem 1.5rem 0;
+}
+
+.cdIMG {
+    width: 30rem;
 }
 }
 
@@ -360,5 +407,9 @@ margin-left: 1rem;
 .projects pre{
     width: 10rem;
     max-width: 100%;
+}
+
+.right-hero {
+    display: none;
 }
 }
