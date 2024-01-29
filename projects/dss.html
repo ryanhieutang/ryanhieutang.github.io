@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link rel="stylesheet" href="/prism.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+            <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+            <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+            <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
+        </nav>
+        <main class="mt-16 flex flex-col">
+            <div class="block">
+                <div data-aos="fade-up" class="inline-block text-[#D4D4D4] mb-6">
+                    <div class="text-lg">05/09/21 • Backend</div>
+                    <h1 class="text-3xl">KlineAccounts Landing Page</h1>
+                </div>
+                <div>
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mb-5">
+                        With the prevelent problem of public Discord bots not having the option to customise the name of server statistics channels, I came up with a solution to create my own bot which includes this functionality. This feature was then successfully implemented in the Discord server of Million Token, a multi-chain cryptocurrency I have interned at as one of their backend developers.
+                    </p>
+                    <img data-aos="fade-up" src="/images/discord-stats.png" alt="Discord Statistics" class="w-[330px] mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">It features the ability to display the count of users in a Discord server in total, current users online, and the amount with users with a specific role (role is changebale to liking). This is set out in a simplistic order for personal customisation of how the voice channel would be named.</p>
+                    <pre data-aos="fade-up" class="code language-javascript text-xs w-[330px]">
+                        <code class="code language-javascript">
+                            totalUsers.setName("Total Users: " + userCount)
+.then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+.catch(console.error);
+
+onlineUsers.setName("Online Users: " + onlineCount)
+.then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+.catch(console.error);
+
+roles.setName("Coders: " + coderCount)
+.then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+.catch(console.error);
+                        </code>
+                    </pre>
+                    <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">By using <a class="font-bold hover:text-[#51545b]" href="https://discord.js.org/" target="”_blank”">discord.js</a>, I was able to interact with the Discord API which essentially is making a GET request to retrieve the data necessary.<br><br>
+                        This project is open source and can be viewed using the steps I have provided on my github repository. The repository can be viewed <a class="font-bold hover:text-[#51545b]" href="https://github.com/ryanhieutang/KlineAccounts" target="”_blank”">here</a></p>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
+    </script>
+</body>
+</html>

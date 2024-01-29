@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link rel="stylesheet" href="/prism.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+            <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+            <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+            <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
+        </nav>
+        <main class="mt-16 flex flex-col">
+            <div class="block">
+                <div data-aos="fade-up" class="inline-block text-[#D4D4D4] mb-6">
+                    <div class="text-lg">27/07/21 • Frontend</div>
+                    <h1 class="text-3xl">Cal-ch the calculator</h1>
+                </div>
+                <div>
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mb-5">
+                    This project is a kickstart to my Javascript learning, in addition to my front-end journey where I wanted to incorporate a fun way to calculate simple equations. Along the process, I broadened my skillsets when handling packages in nodeJS such as tilt.js. Tilt.js is a smooth 3D tilt javascript library that is lightweight and runs on 60FPS, offering users to play around with perspectives on mouse hover. <br></br>
+                    The calculator has a minimalistic interface and is set out by a 4 by 5 grid. I made the buttons "c" (clear) and "+" (addition) be 2 squares wide to emphasise it's importance and "power" compared to the other buttons which only takes up 1 square.
+                    </p>
+                    <img data-aos="fade-up" src="/images/calculatorApp.png" alt="Calculator" class="w-[330px] mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mb-5">It has been set out to be translucent which reflects the warm-pink background when tilted on mouse hover, from inspirations of a CD disk. Furtheremore, a shadow under the calculator has also been applied on the opposite side of mouse hover to give an effect that this calculator is floating on top of the background.</p>
+                    <pre data-aos="fade-up" class="code language-javascript text-xs w-[330px]">
+                        <code class="code language-javascript">
+VanillaTilt.init(document.querySelector(".container"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+});                     </code>
+                    </pre>
+                    <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">This project is open source and can be viewed using the steps I have provided on my github repository. The repository can be viewed 
+                        <a class="font-bold hover:text-[#51545b]" href="https://discord.gg/NNNYfZGn6P" target="”_blank”">here</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
+    </script>
+</body>
+</html>

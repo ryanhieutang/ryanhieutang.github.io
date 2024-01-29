@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Inter;
+    src:url(/src/Inter-Regular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    src:url(/src/Inter-Bold.ttf) format("truetype")
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#intro {
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Hover Effect */
+
+/* Right */
+.hoverText {
+    display: inline-block;
+    transition: 
+    0.35s font-weight,
+    0.35s color;
+}
+
+.hoverText:hover {
+    font-weight: 900;
+    color: #769cdd;
+}
+
+.hoverText:hover + .hoverText {
+    font-weight: 500;
+    color: #94b0df;
+}
+
+.hoverText:hover + .hoverText + .hoverText {
+    font-weight: 300;
+    color: #a7bbdc;
+}
+
+/* Left */
+.hoverText:has(+ .hoverText:hover) {
+    font-weight: 500;
+    color: #94b0df;
+}
+
+.hoverText:has(+ .hoverText + .hoverText:hover) {
+    font-weight: 300;
+    color: #a7bbdc;
+}
+
+.github-link:hover img {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(320deg);
+}

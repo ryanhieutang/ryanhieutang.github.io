@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link rel="stylesheet" href="/prism.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+            <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+            <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+            <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
+        </nav>
+        <main class="mt-16 flex flex-col">
+            <div class="block">
+                <div data-aos="fade-up" class="inline-block text-[#D4D4D4] mb-6">
+                    <div class="text-lg">17/04/23 • Backend</div>
+                    <h1 class="text-3xl">HieuAIO</h1>
+                </div>
+                <div>
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mb-5">
+                        HieuAIO originally started out as a singular module which supports only EB Games but was then developed into a fully functional software that allows users customisation. Currently, it supports EB Games and Zing which are major Australian retailer that specialises in the release of toys and collectibles. At the core of HieuAIO lies a deep connection to my personal identity where the name is established from my middle name "Hieu" in conjunction with the acronym of "all in one", embodying the essence of my unwavering commitment. In the near future, I intend to turn this software into a commercial product as I believe it yields potential in the Australian automation market.<br><br>
+                        Upon startup, users are greeted with a welcome page where a membership key is needed to be able to access the dashboard.
+                    </p>
+                    <img data-aos="fade-up" src="/images/whop-dashboard.png" alt="Calculator" class="w-[330px] mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">I have chosen to use <a class="font-bold hover:text-[#51545b]" href="https://whop.com/" target="”_blank”">Whop</a> as the dashboard system to purchase these keys as they have cutting edge features and excellent documentations to help set up. Using Whop's API, a POST request is made to validate the key that is inputted and users are redirected to the dashboard with their Discord username and tag, upon success.</p>
+                    <pre data-aos="fade-up" class="code language-javascript text-xs w-[330px]">
+                        <code class="code language-javascript">
+const response = await axios.post(
+    `https://api.whop.com/api/v2/memberships/${keyResponse.keyInput}/validate_license`,
+    {
+        'metadata': {
+            'HWID': 'hwid_here'
+        }
+    },
+    {
+        headers: {
+            'Authorization': 'Bearer IW77RIdzG_IuOreWGSxcwHGDjru_cue7u096YHXkw88',
+            'accept': 'application/json',
+            'content-type': 'application/json'
+        }
+    }
+);
+                        </code>
+                    </pre>
+                    <img data-aos="fade-up" src="/images/key-validate.png" alt="Key Validation" class="w-[330px] mt-5 mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                        Options on the dashboard is set out using a selector where arrow keys are used to hover on options and the enter key is used to select it.<br><br>
+                        Tasks will need to be created first in order to run the modules to the user's preference and let the software know what to do. To do so, users will manually add a "profile" which is details about their contact, shipping and billing information. After selecting "Create Tasks" option, users will be greeted with input prompts asking for which site they want to create tasks for, how many tasks on that site, the link of the product, and the profile they would like to use. A final selector of Dashboard or Exit will be shown after tasks have been created, which also is displayed when tasks are ran or webhooks are configured.
+                    </p>
+                    <img data-aos="fade-up" src="/images/create-tasks.png" alt="Create Tasks" class="w-[330px] mt-5 mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                        Start all tasks gives users the ability to start all tasks that are stored in the database, which is truly helpful in attempting to purchase an item which is avaliable on multiple websites or if multiple items are releasing at the same time on different. After selecting "Start All Tasks", the browsers of the tasks will pop up and automate the entire checkout process. Checkpoints of the checkout process will be displayed for users to understand what the automation is currently doing.<br><br>
+                        Specific tasks could also be ran by the site, letting users start it in the case of only one site releasing that product.<br><br>
+                        HieuAIO also has the ability to send out an embedded message on Discord webhooks once an item has been successfully checked out. This is done through discord.js where a POST request is sent using their API, including all the crucial information to notify users of their checkout.
+                    </p>
+                    <img data-aos="fade-up" src="/images/webhook-example.png" alt="Webhook Example" class="w-[330px] mt-5 mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                        Webhooks can be configured by either editing it or deleting the current webhook.<br><br>
+                        A dynamic exiting process is displayed with minimalism where dots increases and exits the application.
+                    </p>
+                    <pre data-aos="fade-up" class="code language-javascript text-xs w-[330px]">
+                        <code class="code language-javascript">
+function exitSequence() {
+    let count = 0;
+    const intervalId = setInterval(() => {
+        count++;
+        clear();
+        console.log(`Exiting${'.'.repeat(count % 4)}`);
+        if (count === 3) {
+            clearInterval(intervalId);
+            clear();
+        }
+    }, 500);
+}
+                        </code>
+                    </pre>
+                    <img  data-aos="fade-up" src="/images/exit-animation.png" alt="Exit Animation" class="w-[330px] mt-5 mb-5 rounded">
+                </div>
+                <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                    Moving forward, features I want to implement to HieuAIO includes: ability to use rotating proxies on tasks to bypass IP address banning, search for product by keywords in cases of no early listings, and bundle into an .exe and allow beta testing.
+                </p>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link rel="stylesheet" href="/prism.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+            <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+            <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+            <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
+        </nav>
+        <main class="mt-16 flex flex-col">
+            <div class="block">
+                <div class="inline-block text-[#D4D4D4] mb-6">
+                    <div class="text-lg">21/08/21 • Frontend</div>
+                    <h1 class="text-3xl">KlineAccounts Landing Page</h1>
+                </div>
+                <div>
+                    <p class="text-sm text-[#9CA3AF] w-[330px] mb-5">
+                        Kline Accounts is a company that specialises in premium accounts for reselling needs. Following a comprehensive consultation with the founder, we worked together to come up with an intricate landing page that closely represents their brand. An original mockup UI was provided which roughly mapped out what they wanted on this page and where they want it. <br></br>
+                        It was to my understanding that they wanted a singular long page, instead of multiple pages, with the key components included a nav bar, hero, testimonials, pricing list, FAQ, and Twitter page preview.
+                    </p>
+                    <img src="/images/kline-mockup.png" alt="Calculator" class="w-[330px] mb-5 rounded">
+                    <p class="text-sm text-[#9CA3AF] w-[330px] mb-5">For the testimonials section, I have created a vertical reviews section where individual cards would infinitely rotate upwards and slowly fade when it becomes the top card.</p>
+                    <pre class="code language-javascript text-xs w-[330px] h-[550px]">
+                        <code class="code language-javascript">
+.cards .card {
+    animation: animate 15s infinite linear;
+    animation-delay: calc(3s * var(--delay));
+}
+    
+.outer:hover .card {
+    animation-play-state: paused;
+}
+
+.cards .card:last-child {
+    animation-delay: calc(-3s * var(--delay));
+}
+    
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+    5%,
+    20% {
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+    }
+    25%,
+    40% {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0%) scale(1);
+    }
+    45%,
+    60% {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.7);
+    }
+    65%,
+    100% {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.5);
+    }
+}                    </code>
+                    </pre>
+                    <p class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">Instead of a collage or slider of success pictures with the products of Kline Accounts, I suggested to the client to integrate <a class="font-bold hover:text-[#51545b]" href="https://publish.twitter.com/#" target="”_blank”">Twitter's Embedded Timeline</a> which let's users view an account's tweets from their website. This is convenient as Kline Accounts already posts and retweets it's users' success stories and posts on their Twitter account, and adds a stylish touch to the end of the lannding page.</p>
+                    <pre class="code language-javascript text-xs w-[330px]">
+                        <code class="code language-html">
+&lt;a class="twitter-timeline" data-width="600" data-height="700" data-theme="dark" href="https://twitter.com/KlineAccounts?ref_src=twsrc%5Etfw"&gt;Tweets by KlineAccounts&lt;/a&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+                        </code>
+                    </pre>
+                    <img src="/images/kline-twitter.png" alt="Kline Accounts Embedded Twitter" class="w-[330px] mt-5 mb-5 rounded">
+                    <p class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                        Other small details of this website includes the animations used, when sections have been anchored to, from the Javascript library AOS (animate on scroll) and the ability to join their Discord server at a click of a button.<br><br>
+                        This project is open source and can be viewed using the steps I have provided on my github repository. The repository can be viewed 
+                        <a class="font-bold hover:text-[#51545b]" href="https://github.com/ryanhieutang/KlineAccounts" target="”_blank”">here</a></p>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    <script src="/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
+    </script>
+</body>
+</html>

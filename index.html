@@ -1,75 +1,108 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Ryan Tang">
-    <meta property="og:description" content="ryan's portfolio">
-    <meta property="og:url" content="https://ryanhieutang.github.io">
-    <title>Ryan Tang</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link rel="stylesheet" href="dist/magic-mouse.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="main-page">
-        <nav class="navbar">
-            <a class="navtext" href="/index.html" style="font-weight: bold; padding: 2px;">ツ</a>
-            <a class="navtext" href="/projects.html">projects</a>
-            <a class="navtext" href="/achievements.html" >achievements</a>
-            <a class="navtext" href="/activity.html">activity</a>
-        </nav>
-        <div class="hero-section">
-            <div class="main">
-                <div class="left-hero">
-                    <h1 data-aos="fade-up" class="name">ryan tang</h1>
-                    <p data-aos="fade-up" class="personal-desc">full stack developer and graphic designer from down under 🦘 that makes innovative projects</p>
-                    <div data-aos="fade-up" class="status">
-                        <img src="./images/ryangif.gif" class="pfp-gif">
-                        <div class="status-text">
-                            <div class="status-update">ryanツ#4649</div>
-                            <div class="bottom-status">📍 syd, aus</div>
-                        </div>
+    <div class="relative min-h-screen ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <div class="absolute z-40">
+            <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+                <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+                <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+                <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+                <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
+            </nav>
+            <main data-aos="fade-up" class="mt-32 flex flex-col">
+                <div class="text-[#D4D4D4] text-5xl sm:text-6xl font-inter flex">
+                    <div class="hoverText">
+                        r
+                    </div>
+                    <div class="hoverText">
+                        y
+                    </div>
+                    <div class="hoverText">
+                        a
+                    </div>
+                    <div class="hoverText mr-[14px]">
+                        n
+                    </div>
+                    <div class="hoverText">
+                        t
+                    </div>
+                    <div class="hoverText">
+                        a
+                    </div>
+                    <div class="hoverText">
+                        n
+                    </div>
+                    <div class="hoverText">
+                        g
                     </div>
                 </div>
-                <div data-tilt data-tilt-scale="1.03" class="right-hero">
-                    <img src="./images/cd.png" class="cdIMG" id="cdImage">
-                    <audio src="K. - Cigarettes After Sex.mp3" id="audioPlayer"></audio>
+                <p class="text-[#9CA3AF] text-sm sm:text-base mt-5 w-80">front-end web developer from down under 🦘 that makes innovative projects</p>
+                <div class="flex flex-row mt-6 text-white gap-[6px] text-sm sm:text-base">
+                    <p>it is</p>
+                    <p class="text-[#a7afbd] bg-[#adb8cb]/10 p-[1px] rounded-sm w-[160px] sm:w-[180px] text-center whitespace-nowrap">
+                        <span id="aest-time" class="inline-block"></span>
+                    </p>
+                    <p>for me right now</p>
                 </div>
-            </div>
-            
-            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="socials">
-                <a href="https://github.com/ryanhieutang" target=”_blank” class="social-icons">
-                    <img src="./images/github.svg" alt="github">
-                </a>
-                <a href="https://twitter.com/devKenz0" target=”_blank” class="social-icons" style="padding-top: 1px">
-                    <img src="./images/twitter.svg" alt="twitter">
-                </a>
-                <a href="https://discord.gg/NNNYfZGn6P" target=”_blank” class="social-icons" style="padding: 2px 0px 0px 0px;">
-                    <img src="./images/discord.svg" alt="discord">
-                </a>
-            </div>
-            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="email">
-                email :
+            </main>
+        </div>
+        <footer data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="flex flex-row bottom-0 absolute items-center w-full mb-16">
+            <div class="hover:scale-[1.02] hover:text-[#769cdd] text-white text-xs sm:text-sm flex gap-1 items-center">
+                <div class="hidden md:block">email :</div>
                 <a href="mailto:ryanhieutang@gmail.com">ryanhieutang@gmail.com</a>
             </div>
-        </div>
+            <div class="absolute right-0 mr-24 sm:mr-32 md:mr-44 lg:mr-[30%] flex items-end gap-2 flex-col">
+                <div id="toast" class="absolute top-[100px] w-full rounded-md text-xs text-[#D4D4D4] hidden py-[10px] px-[14px] bg-black gap-2 items-center">
+                    <img src="/src/checkmark.png" alt="Checkmark" class="w-[14px] bg-green-400 rounded-[50%]">
+                    <div class="w-full">Successfully copied</div> 
+                </div>
+                <div id="toast-simple" class="fixed bottom-5 lg:right-[30%] hidden text-nowrap items-center w-full max-w-xs py-[10px] px-[14px] space-x-4 rtl:space-x-reverse text-xs text-[#D4D4D4] bg-black divide-x rtl:divide-x-reverse divide-gray-200 rounded-md shadow" role="alert">
+                    <img src="/src/checkmark.png" alt="Checkmark" class="w-[14px] bg-green-400 rounded-[50%]">
+                    <div class="ps-4 text-sm font-normal">Successfully copied</div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="https://github.com/ryanhieutang" target="_blank" class="hover:scale-[1.07] w-[12px] sm:w-[14px]">
+                        <img src="./src/github.svg" alt="Github Icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/rryantang/" target="_blank" class="hover:scale-[1.07] w-[13px] sm:w-[16px]">
+                        <img src="./src/linkedin.svg" alt="Linkedin Icon">
+                    </a>
+                    <a href="https://twitter.com/rryantang" target="_blank" class="hover:scale-[1.07] w-[10px] sm:w-3">
+                        <img src="./src/x.svg" alt="X Icon">
+                    </a>
+                    <a onclick="copyToClipboard()" class="hover:scale-[1.07] w-[14px] sm:w-4">
+                        <img src="./src/discord.svg" alt="Discord Icon">
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
-    <script type="text/javascript" src="node_modules/vanilla-tilt/dist/vanilla-tilt.js"></script>   
-    <script src="./script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
-    <script type="text/javascript">
-        options = {
-        "cursorOuter": "circle-basic",
-        "hoverEffect": "circle-move",
-        "hoverItemMove": false,
-        "defaultCursor": false,
-        "outerWidth": 30,
-        "outerHeight": 30
-          };
-        magicMouse(options);
+    <script src="/script.js"></script>
+    <script src="/copytoclipboard.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
     </script>
 </body>
 </html>

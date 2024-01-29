@@ -1,69 +1,88 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Ryan Tang">
-    <meta property="og:description" content="ryan's portfolio">
-    <meta property="og:url" content="https://ryanhieutang.github.io">
-    <title>Ryan Tang</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="main-page">
-        <nav class="navbar">
-            <a class="navtext" href="/index.html" style="font-weight: bold; padding: 2px;">ツ</a>
-            <a class="navtext" href="/projects.html">projects</a>
-            <a class="navtext" href="/achievements.html" >achievements</a>
-            <a class="navtext" href="/activity.html">activity</a>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+                <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+                <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+                <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
         </nav>
-        <div data-aos="fade-up" class="hero-section">
-            <div class="project-list">
-                <a class="project-header" href="/Projects/cal-ch.html">
-                    <div class="project-date">27/07/21 • Frontend</div>
-                    <div class="project-title">Cal-ch the calculator</div>
+        <main class="mt-16 flex flex-col gap-10">
+            <div data-aos="fade-up" class="block">
+                <a href="/projects/c.html" class="hover:scale-[1.02] hover:text-[#769cdd] inline-block text-[#D4D4D4]">
+                    <div class="text-base">27/07/21 • Frontend</div>
+                    <h1 class="text-2xl">Cal-ch the calculator</h1>
                 </a>
-                <p class="project-desc">Cal-ch is a user friendly lazy calculator also known as Calculator Couch. This project was built using HTML, CSS and JS showcasing my knowledge on glassmorphism.<br><br>It featured basic math functionalities through logical pieces of code and acts just like a standard calculator on your Mac or PC. The repository can be viewed <a style="font-weight: 800; text-decoration: none; color: #51545b;" href="https://github.com/ryanhieutang/cal-ch">here</a></p>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    Cal-ch is a user friendly lazy calculator also known as Calculator Couch. This project was built using HTML, CSS and JS showcasing my knowledge on glassmorphism.<br><br>
+                    It featured basic math functionalities through logical pieces of code and acts just like a standard calculator on your Mac or PC.
+                </p>
             </div>
-            <div class="project-list">
-                <a class="project-header" href="Projects/kline-accounts.html">
-                    <div class="project-date">21/08/21 • Frontend</div>
-                    <div class="project-title">KlineAccounts Landing Page</div>
+            <div data-aos="fade-up" class="block">
+                <a href="/projects/ka.html" class="hover:scale-[1.02] hover:text-[#769cdd] text-[#D4D4D4] inline-block">
+                    <div class="text-base">21/08/21 • Frontend</div>
+                    <h1 class="text-2xl">KlineAccounts Landing Page</h1>
                 </a>
-                <p class="project-desc">This landing page was one of my first commercial projects as a full stack developer! Programming languages such as HTML, CSS, and JS were used to build this website and I used AOS, a nifty animation library to get the job done.<br><br>This landing page was split up into seven components : the hero, about, testimonials, prices, faq, twitter success, and footer. The repository can be viewed <a style="font-weight: 800; text-decoration: none; color: #51545b;"href="https://github.com/ryanhieutang/KlineAccounts">here</a></p>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    This landing page was one of my first commercial projects as a full stack developer! Programming languages such as HTML, CSS, and JS were used to build this website and I used AOS, a nifty animation library to get the job done.<br><br>
+                    This landing page was split up into seven components: the hero, about, testimonials, prices, faq, twitter success, and footer. 
+                </p>
             </div>
-            <div class="project-list">
-                <a class="project-header" href="Projects/discord-server-statistics.html">
-                    <div class="project-date">05/09/21 • Backend</div>
-                    <div class="project-title">Discord Server Statistics</div>
+            <div data-aos="fade-up" class="block">
+                <a href="projects/dss.html" class="hover:scale-[1.02] hover:text-[#769cdd] text-[#D4D4D4] inline-block">
+                    <div class="text-base">05/09/21 • Backend</div>
+                    <h1 class="text-2xl">Discord Server Statistics</h1>
                 </a>
-                <p class="project-desc">This project targets a major problem within Discord, which is the ability to customise the aesthetics of the channel names where the stats are displaying. This was coded purely using Javascript which dives deep into experimenting with Discord's API (discord.js), making it easily configured by users.<br><br>The features of this project includes the ability to keep track of total users, online users, and users with a certain role(s) through the manipulation of the channel's name. The repository can be viewed <a style="font-weight: 800; text-decoration: none; color: #51545b;"href="https://github.com/ryanhieutang/discord-server-stats">here</a></p>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    This project targets a major problem within Discord, which is the ability to customise the aesthetics of the channel names where the stats are displaying. This was coded purely using Javascript which dives deep into experimenting with Discord's API (discord.js), making it easily configured by users.<br><br>
+                    The features of this project includes the ability to keep track of total users, online users, and users with a certain role(s) through the manipulation of the channel's name.
+                </p>
             </div>
-            <div class="project-list">
-                <a class="project-header" href="Projects/hieuAIO.html">
-                    <div class="project-date">17/04/23 • Backend</div>
-                    <div class="project-title">HieuAIO</div>
+            <div data-aos="fade-up" class="block">
+                <a href="/projects/ha.html" class="hover:scale-[1.02] hover:text-[#769cdd] text-[#D4D4D4] inline-block">
+                    <div class="text-base">17/04/23 • Backend</div>
+                    <h1 class="text-2xl">HieuAIO</h1>
                 </a>
-                <p class="project-desc">HieuAIO is an autocheckout software that is engineered for perfomance, specialising in retail and sneaker sites within Australia. Its versatility gives it a competitive edge over the market as it offers lightning speed checkout times and user-friendly tools.<br></br>It currently offers the ability to create tasks, start all tasks, start tasks by site and configure webhooks, all at the reach of the CLI interface</p>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    HieuAIO is an autocheckout software that is engineered for perfomance, specialising in retail and sneaker sites within Australia. Its versatility gives it a competitive edge over the market as it offers lightning speed checkout times and user-friendly tools.<br><br>
+                    It currently offers the ability to create tasks, start all tasks, start tasks by site and configure webhooks, all at the reach of the CLI interface
+                </p>
             </div>
-            <div class="project-note">📝 Note : A list of all my projects can be found on my <a style="font-weight: bold; font-size: 1rem; text-decoration: none; color: inherit;" href="https://github.com/ryanhieutang"target=”_blank”>Github</a> and <a style="font-weight: bold; font-size: 1rem; text-decoration: none; color: inherit;" href="https://www.behance.net/ttangdesigns" target=”_blank”>Behance</a></div>
-        </div>
+            <div data-aos="fade-up" class="block mb-10">
+                <a href="/projects/tn.html" class="hover:scale-[1.02] hover:text-[#73a3f7] text-[#D4D4D4] inline-block">
+                    <div class="text-base">02/07/23 • Frontend</div>
+                    <h1 class="text-2xl">Tuned Notify Landing Page</h1>
+                </a>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    Tuned Notify is an e-commerce business that I have been working closely with for over 7 months now, providing them with leads within my IaaS business. They have reached out with the intention to revamp their website, in which I delivered for them a cutting edge landing page that truly screams e-commerce. <br><br>
+                    As this landing page will be used to obtain new members for their group, eye catching elements were used that ran seamlessly across the whole page from the navigation bar to the footer.
+                </p>
+            </div>
+        </main>
     </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script src="/prism.js"></script>
-    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
-    <script type="text/javascript">
-        options = {
-        "cursorOuter": "circle-basic",
-        "hoverEffect": "circle-move",
-        "hoverItemMove": false,
-        "defaultCursor": false,
-        "outerWidth": 30,
-        "outerHeight": 30
-          };
-        magicMouse(options);
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#90b6f7',
+            removeDefaultCursor: true,
+        })
     </script>
 </body>
 </html>

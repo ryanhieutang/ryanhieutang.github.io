@@ -1,51 +1,76 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Ryan Tang">
-    <meta property="og:description" content="ryan's portfolio">
-    <meta property="og:url" content="https://ryanhieutang.github.io">
-    <title>Ryan Tang</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="main-page">
-        <nav class="navbar">
-            <a class="navtext" href="/index.html" style="font-weight: bold; padding: 2px;">ツ</a>
-            <a class="navtext" href="/projects.html">projects</a>
-            <a class="navtext" href="/achievements.html" >achievements</a>
-            <a class="navtext" href="/activity.html">activity</a>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+            <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+            <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+            <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
         </nav>
-        <div data-aos="fade-up" class="hero-section">
-            <div class="project-list">
-                <div class="project-date">Internship • Backend</div>
-                <h2 class="project-title">Developer at Million Token</h2>
-                <p class="project-desc">In early Aug 2021 I got a chance to intern at Million Token, a decentralised crypto currency, where I worked as one of their many backend developers.<br><br>My main task was to maitain the security of their Discord community and increase the satisfaction of user experience within the guild. Contributions I have made includes the development of their server statistics channels, bug fixes to their Discord bot, and bug fixes to their social media monitors. Their website can be viewed <a style="font-weight: 800; text-decoration: none; color: #51545b;" href="https://milliontoken.org/">here</a></p>
+        <main class="mt-16 flex flex-col gap-10">
+            <div data-aos="fade-up" class="block">
+                <div class="text-[#D4D4D4] inline-block">
+                    <div class="text-base">Aug 21' • Junior Backend Developer</div>
+                    <h1 class="text-2xl">Million Token</h1>
+                </div>
+                <p class="text-sm sm:text-[15px text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    For a short period in August I got a chance to internship at Million Token, a decentralised crypto currency, where I worked as on their Discord bot application.
+                    My main task was to maintain the security of their Discord community and increase the efficiency of user experience within the guild. Contributions I have made includes the development of their server statistics channels, bug fixes to their Discord bot, and bug fixes to their social media monitors all through DiscordJS.
+                </p>
             </div>
-            <div class="project-list">
-                <a class="project-header" href="https://twitter.com/kairalabss" target=”_blank”>
-                    <div class="project-date">Personal Project • Branding</div>
-                    <h2 class="project-title">Kaira Labs</h2>
+            <div data-aos="fade-up" class="block">
+                <div class="text-[#D4D4D4] inline-block">
+                    <div class="text-base">Oct 23' • Personal Project</div>
+                    <h1 class="text-2xl">Birthday Website Commissions</h1>
+                </div>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    From May to October 2023, I worked on a birthday interactive website in the form of a game that consists of activities and dialogues. Upon sharing this creation, it gained an impressive 1.9 million views and 421.8k positive interactions. This overwhelming resposne which has inspired me to consider utilising this momentum to create and commission similar "birthday" websites for others to give to their friends and family.<br><br>
+                    The post successfully generated interest from over 50k individuals, where 50 of those were trafficked to sending me an email. As a result, commissions for this year are fully booked.</p>
+            </div>
+            <div data-aos="fade-up" class="block">
+                <div class="text-[#D4D4D4] inline-block">
+                    <div class="text-base">Dec 23' • Junior Frontend Developer</div>
+                    <h1 class="text-2xl">Powdays</h1>
+                </div>
+                <p class="text-sm sm:text-[15px] text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    To continue my learning in web development, I embarked on an exciting journey as a junior frontend developer at Powday, a dynamic startup focusing on the problems and it's solutions within the ski/snowboard industry. My role at Powday involved collaborating with a small team of both backend and frontend developers to create an immersive and user-friendly mobile application. Working within an agile development environment, I quickly adapted to the fast-paced nature of mobile application development while learning usages of Android Studio and working with React Native.
+                </p>
+            </div>
+            <div data-aos="fade-up" class="block mb-10">
+                <a href="https://discord.gg/NNNYfZGn6P" target="_blank" class="hover:scale-[1.02] hover:text-[#769cdd] text-[#D4D4D4] inline-block">
+                    <div class="text-base">Present • Personal Project</div>
+                    <h1 class="text-2xl">Kaira Labs</h1>
                 </a>
-                <p class="project-desc">B2B IaaS startup providing leads on non-sneaker arbitrageable products. This company started in early May 2021, where indications are sent out to groups on profitable "lowkey" items that are likely to have a high resell price.<br></br>By leveraging this company with the expertise of a dedicated PR officer, we have accumulated over 30 satisfied clients and have established many long-term relationship. Services are offered as a monthly subscription with tailored pricing based on factors such as group size and group renewal price. The Discord server to this company can be viewed <a style="font-weight: 800; text-decoration: none; color: #51545b;" href="https://discord.gg/NNNYfZGn6P" target=”_blank”>here</a></p>
+                <p class="text-sm sm:text-[15px text-[#9CA3AF] w-[330px] sm:w-[400px]">
+                    B2B IaaS startup providing leads on non-sneaker arbitrageable products. This company started in early May 2021, where indications are sent out to groups on profitable "lowkey" items that are likely to have a high resell price.
+                    By leveraging this company with the expertise of a dedicated PR officer, we have accumulated over 30 satisfied clients and have established many long-term relationship. Services are offered as a monthly subscription with tailored pricing based on factors such as group size and group renewal price. The Discord server to this company can be viewed <a class="font-bold hover:text-[#51545b]" href="https://discord.gg/NNNYfZGn6P" target="”_blank”">here</a>
+                </p>
             </div>
-        </div>
+        </main>
     </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
-    <script type="text/javascript">
-        options = {
-        "cursorOuter": "circle-basic",
-        "hoverEffect": "circle-move",
-        "hoverItemMove": false,
-        "defaultCursor": false,
-        "outerWidth": 30,
-        "outerHeight": 30
-          };
-        magicMouse(options);
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
     </script>
 </body>
 </html>

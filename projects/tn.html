@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#769cdd"/>
+  <meta name="description" content="Hey my name is Ryan! Welcome to my engineering/development portfolo."/>
+  <title>Ryan Tang's Portfolio</title>
+  <link href="/src/input.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/build.css">
+  <link rel="stylesheet" href="/prism.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ml-24 sm:ml-32 md:ml-44 lg:ml-[20%]">
+        <nav class="flex flex-row text-white text-xs sm:text-sm gap-10 mt-16 sm:mt-20">
+            <a href="/index.html" class="hover:scale-[1.02] hover:text-[#769cdd]">ツ</a>
+            <a href="/projects.html" class="hover:scale-[1.02] hover:text-[#769cdd]">projects</a>
+            <a href="/achievements.html" class="hover:scale-[1.02] hover:text-[#769cdd]">achievements</a>
+            <a href="/activity.html" class="hover:scale-[1.02] hover:text-[#769cdd]">activity</a>
+        </nav>
+        <main class="mt-16 flex flex-col">
+            <div class="block">
+                <div data-aos="fade-up" class="inline-block text-[#D4D4D4] mb-6">
+                    <div class="text-lg">02/07/23 • Frontend</div>
+                    <h1 class="text-3xl">Tuned Notify Landing Page</h1>
+                </div>
+                <div>
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mb-5">
+                        <a class="font-bold hover:text-[#51545b]" href="https://tunednotify.com/" target="”_blank”">Tuned Notify</a> is an Australian sneaker community providing the latest information related to reselling sneakers, electronics, collectibles & anything in between. The owner Filip approach me to redesign and code their landing page, formulating a visual that better suits the business's image.<br></br>
+                        Key sections that he asked for was an eye catching hero, traffic to their success page, perks layout, testimonials, and FAQs.<br><br>
+                        For each icon used, I implemented a transition that pulls the icon in from the right side as well as give it a "hover bounce" effect using CSS. This can be seen in the succes, and perks sections, where I created a infinite linear attribute that moves the image up and down.
+                    </p>
+                    <img data-aos="fade-up" src="/images/iconhover.png" alt="Icon Hover" class="w-[330px] mb-5 rounded">
+                    <pre data-aos="fade-up" class="code language-javascript text-xs w-[330px]">
+                        <code class="code language-javascript">
+@keyframes MoveUpDown {
+    0%,to{
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+    50%{
+        -webkit-transform:translateY(-15px);
+        transform:translateY(-15px)
+    }
+}
+                        
+.keyM {
+    display:none;
+    -webkit-animation:MoveUpDown 1.9s linear infinite;
+    animation:MoveUpDown 1.9s linear infinite;
+    display:block!important
+}
+
+.keyD {
+    -webkit-animation:MoveUpDown 1.9s linear infinite;
+    animation:MoveUpDown 1.9s linear infinite;
+    display:none!important
+}</code>
+                    </pre>
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                        For the perks section, I went for a layout that summarised all the amazing features that this community offers in an engaging way. Keeping in mind the different media queries, I went for a 3x3 grid for desktops, 2x4 grid for tablets and 1x8 grid for mobile.<br></br>
+                        Communication was kept close with Filip to decide on titles and descriptions for each feature that Tuned Notify offers, as well as selecting the right icons that was derived from the icon library <a class="font-bold hover:text-[#51545b]" href="https://iconic.app/" target="”_blank”">Iconic</a>.
+                    </p>
+                    <img data-aos="fade-up" src="/images/perks.png" alt="Perks Section" class="w-[330px] mt-5 mb-5 rounded">
+                    <p data-aos="fade-up" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                        For the FAQs section, I decided on using an accordian from the component library <a class="font-bold hover:text-[#51545b]" href="https://daisyui.com/" target="”_blank”">DaisyUI</a>, consisting of 3 components for each FAQ; checkbox, collapsible title, collapsible content.<br><br>
+                        This method of fulfilling the idea of "Frequently Asked Questions" was chosen because it is clutter-free, stylish and easily accessible for everyone to utilise.
+                    </p>
+                </div>
+                <pre data-aos="fade-up" class="code language-html text-xs w-[330px]">
+                    <code class="code language-html">
+&lt;input type="checkbox" name="my-accordion-2" checked="checked"/&gt; 
+&lt;div class="collapse-title"&gt;
+    Question
+&lt;/div&gt;
+&lt;div class="collapse-content"&gt; 
+    &lt;p&gt;Answer&lt;/p&gt;
+&lt;/div&gt;        </code>
+                </pre>
+                <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="text-sm text-[#9CA3AF] w-[330px] mt-5 mb-5">
+                    Furthermore, each macro component of this landing page has an animate-on-scroll effect from the library <a class="font-bold hover:text-[#51545b]" href="https://michalsnik.github.io/aos/" target="”_blank”">AOS</a>.
+                </p>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
+    <script>
+        new kursor({
+            type: 4,
+            color: '#769cdd',
+            removeDefaultCursor: true,
+        })
+    </script>
+</body>
+
+</html>
